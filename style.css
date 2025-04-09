@@ -1,0 +1,525 @@
+/* This targets all elements on the page */
+* {
+  margin: 0;  /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Ensures padding and borders are included in element's total width/height */
+}
+
+/* This targets the body tag specifically */
+body {
+  font-family: Arial, sans-serif; /* Sets a basic sans-serif font */
+  line-height: 1.6; /* Improves readability with a better line height */
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark text color for better contrast */
+  margin: 0; 
+  overflow-x: hidden;
+}
+
+.navbar{
+  display: flex;
+  background-color: rgba(0, 0, 0, 1); /* Black color with 10% opacity */
+  /* border-radius: 10px; Optional: for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  height: 9vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  /* justify-content:center ;   */
+}
+
+.logo{
+  width: 20%;
+  height: 9vh;
+  text-align: center;
+}
+.logo>img{
+  margin-top: 6px;
+  border-radius: 100px;
+  min-width: 120px;
+  max-width: 150px;
+  box-shadow: 1px 0px 12px 2px rgba(133, 133, 133, 0.6);
+}
+a{
+  text-decoration: none;
+  height: 100%;
+  padding: 18px;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.5s;
+  /* border-radius: 15px; */
+}
+
+.navbar>ul{
+  /* border: 2px solid blue; */
+  list-style-type: none;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: -9999;
+}
+
+.navbar>li{
+  width: 8vw;
+  min-width: 120px;
+  text-align: center;
+  /* border: 2px solid red; */
+  transition: 2s;
+}
+a:hover{
+  background-color: rgb(54, 53, 53);
+  color: rgb(255, 255, 255);
+}
+.signin{
+  display: block;
+  background-color: black;
+  width: 10%;
+  min-width: 100px;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  border:2px solid white;
+  color: white;
+  position: relative;
+  transition: 0.7s;
+}
+.signin:hover{
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.sn{
+  background-color: rgb(51, 51, 245);
+  border: none;
+}
+
+.sn:hover{
+  background-color: blue;
+}
+/* 
+.image{
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://img.freepik.com/premium-photo/colorful-background-with-yellow-blue-geometric-pattern_481527-25413.jpg);
+  background-size: 100%;
+} */
+
+
+.dots{
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+  top: 0px;
+  left: 100%;
+  z-index: 999999;
+  /* margin-top: 300px; */
+  width: 50px;
+  height: 9vh;
+  background-color: rgb(0, 0, 0);
+  color: rgb(242, 235, 235);
+}
+
+@media (max-width: 900px) {
+  li{
+    width: 10vw;
+    min-width: 90px;
+  }
+  .signin{
+    width: 15%;
+    font-size: 13px;
+  }
+  .logo{
+    width: 25%;
+  }
+  a{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar{
+    flex-direction: column;
+    z-index: 9999;
+    /* height: 35vh; */
+  }
+  ul{
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    top: -40vh;
+    transition: 1s;
+  }
+  li{
+    width: 100%;
+  }
+  a{
+    text-align: start;
+  }
+  .signin{
+    top: -500px;
+    opacity: 0;
+  }
+  .dots{
+    left: 90%;
+  }
+}
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif; 
+  background-color: #ffffff;
+  margin: 0; 
+  padding:0;
+  overflow-x: hidden;
+  background-color: rgb(2, 2, 2);
+}
+
+/* img{
+  height: 10vw;
+  width: 10vh;
+} */
+
+.main{
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  /* gap: 40px; */
+  align-items: center;
+}
+.content{
+  /* border: 2px solid black; */
+  text-align: center;
+  /* padding-top: 30px; */
+  width: 40%;
+  height: 50%;
+  color: #ffffff;
+}
+.content>h3{
+  /* margin-top: 30px; */
+  font-size: 1.5vw;
+}
+
+.content>p{
+  margin-top: 5px;
+  font-size: 1vw;
+  text-align: justify;
+  padding: 20px;
+  padding-top: 0;
+}
+.contenti{
+  /* border: 2px solid rgb(170, 3, 3); */
+  width: 250px;
+  border-radius:20px;
+  text-align: center;
+  height: 70%;
+  background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.1)
+    ),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs8kxSUX4J0PyDpB24DZ-NqPvZXvfpyRIMlw&s);
+    background-size: 100% 100%;
+    box-shadow: 5px 5px 20px 2px rgb(119, 118, 118);
+}
+
+.c2{
+  background-image: url(https://4x4works.b-cdn.net/app/uploads/2021/01/OM-KIT023-CE-1.jpg?width=800&quality=85);
+}
+.c3{
+  background-image: url(https://rbptires.com/wp-content/uploads/black-hardrock-off-road-wheels-with-rbp-tires-2.jpg);
+}
+
+
+button{
+  width: 10vw;
+  height: 40px;
+  color: white;
+  background-color: rgba(255, 254, 254, 0.01);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  transition: 1s;
+}
+.b22{
+  background-color: #225ac9;
+  border: 1px solid #225ac9;
+  color: black;
+}
+.b11:hover{
+  background-color: white;
+  color: black;
+  /* border: 3px solid rgb(0, 0, 0); */
+}
+
+.b22:hover{
+  /* background-color: rgb(0, 0, 0); */
+  color: rgb(244, 244, 249);
+  border: 3px solid rgb(0, 0, 255);
+}
+
+
+@media (max-width: 1200px) {
+  .main{
+      gap: 20px;
+      height: 50vh;
+  }
+  .contenti{
+      height: 30vh;
+      width: 200px;
+      /* padding-top: 80px; */
+  }
+  .content{
+      width: 50%;
+      padding-top: 0px;
+  }
+  .content>h3{
+      font-size: 4vw;
+  }
+  .content>p{
+      font-size: 1.5vw;
+  }
+  button{
+      width: 15vw;
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  .main{
+      flex-direction:column ;
+      /* justify-content: center; */
+      align-items: center;
+      gap: 0px;
+      height: 75vh;
+  }
+  .contenti{
+      height: 25vh;
+      width: 200px;
+  }
+  .content{
+      width: 80%;
+  }
+  .content>h3{
+      margin-top: 30px;
+      font-size: 5vw;
+  }
+  .content>p{
+      font-size: 3vw;
+  }
+  button{
+      width: 22vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+.slidebar{
+  width: 100vw;
+  height: 45vmax;
+  /* border: 3px solid black; */
+  position: relative;
+  transition: 0.5s;
+}
+
+.bars{
+  /* display: inline-block; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+.bars>h1{
+  /* border: 2px solid green; */
+  z-index: 1111;
+  margin-bottom: 2vw;
+  text-align: center;
+  font-size: 3vw;
+  /* text-shadow: horizontal-offset vertical-offset blur-radius color; */
+  text-shadow: 1px 1px 5px #fff3f3;
+  transition: 0.5s;
+}
+.bars>p{
+  /* border: 2px solid rgb(11, 0, 128);  */
+  min-width: 70vw;
+  max-width: 30vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+.bars>h1:hover{
+  color: rgb(255, 77, 0);
+}
+.more{
+  display: block;
+  color: white;
+  margin-top: 3vw;
+  width: 10vw;
+  height: 3vw;
+  background-color: rgba(200, 55, 11, 0.9);
+  border: 2px solid rgba(200, 55, 11, 0.9);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.more:hover{
+  background-color: rgba(52, 152, 219, 0.01);
+  border: 2px solid rgba(200, 55, 11, 0.9);
+  
+}
+
+@media screen and (max-width: 600px) {
+  .bars>h1{
+    font-size: 6vw ;
+  }
+  .bars>p{
+    margin-top: 5vw;
+    font-size: 3.8vw ;
+  }
+  .more{
+    width: 30vw;
+    height: 8vw;
+    margin-top: 10vw;
+  }
+}
+
+.b1{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.9), 
+    rgba(0, 0, 0, 0.3)
+  ),url(https://www.motortrend.com/uploads/2022/03/011-1995-jeep-cherokee-xj-off-road.jpg?w=768&width=768&q=75&format=webp) ;
+  /* opacity: 0.9; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b2{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.9), 
+    rgba(0, 0, 0, 0.3)
+  ),url(https://realtruck.com/f/148322/1200x700/887f3a04c8/best-bronco-hero.jpg/m/1200x700) ;
+  /* opacity: 0.9; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.b3{
+  background:  linear-gradient(
+    rgba(0, 0, 0, 0.9), 
+    rgba(0, 0, 0, 0.3)
+  ),url(https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/08/timberline.jpg);
+  /* opacity: 1; */
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
+
+
+
+
+
+
+
+/* / */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
